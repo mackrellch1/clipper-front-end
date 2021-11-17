@@ -6,7 +6,7 @@ function App() {
 	
 	const [personTalking, setPersonTalking] = useState(null);
 
-	const getSoundUrl = (id) => `https://storage.googleapis.com/discord-clips/${id}.ogg`
+	const getSoundUrl = (id) => `https://storage.googleapis.com/amplify-discord-clips/${id}.ogg`
 	const getSound = async () => {
 		//const [response] = await fetch("http://localhost:2002/random", {
 		const [response] = await fetch("https://discord-clips-api-5vhmvf6quq-uk.a.run.app/random", {
