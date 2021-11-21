@@ -1,8 +1,8 @@
 {
   "files": {
     "main.css": "/clipper-front-end/static/css/main.8c8b27cf.chunk.css",
-    "main.js": "/clipper-front-end/static/js/main.70c34d88.chunk.js",
-    "main.js.map": "/clipper-front-end/static/js/main.70c34d88.chunk.js.map",
+    "main.js": "/clipper-front-end/static/js/main.843e941f.chunk.js",
+    "main.js.map": "/clipper-front-end/static/js/main.843e941f.chunk.js.map",
     "runtime-main.js": "/clipper-front-end/static/js/runtime-main.ee7f792e.js",
     "runtime-main.js.map": "/clipper-front-end/static/js/runtime-main.ee7f792e.js.map",
     "static/js/2.7333fbcd.chunk.js": "/clipper-front-end/static/js/2.7333fbcd.chunk.js",
@@ -18,6 +18,6 @@
     "static/js/runtime-main.ee7f792e.js",
     "static/js/2.7333fbcd.chunk.js",
     "static/css/main.8c8b27cf.chunk.css",
-    "static/js/main.70c34d88.chunk.js"
+    "static/js/main.843e941f.chunk.js"
   ]
 }
