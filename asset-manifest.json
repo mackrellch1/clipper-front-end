@@ -1,23 +1,23 @@
 {
   "files": {
-    "main.css": "/clipper-front-end/static/css/main.bb970e54.chunk.css",
-    "main.js": "/clipper-front-end/static/js/main.a0170e02.chunk.js",
-    "main.js.map": "/clipper-front-end/static/js/main.a0170e02.chunk.js.map",
-    "runtime-main.js": "/clipper-front-end/static/js/runtime-main.ee7f792e.js",
-    "runtime-main.js.map": "/clipper-front-end/static/js/runtime-main.ee7f792e.js.map",
-    "static/js/2.7d71d538.chunk.js": "/clipper-front-end/static/js/2.7d71d538.chunk.js",
-    "static/js/2.7d71d538.chunk.js.map": "/clipper-front-end/static/js/2.7d71d538.chunk.js.map",
-    "static/js/3.a7cdbc11.chunk.js": "/clipper-front-end/static/js/3.a7cdbc11.chunk.js",
-    "static/js/3.a7cdbc11.chunk.js.map": "/clipper-front-end/static/js/3.a7cdbc11.chunk.js.map",
+    "main.css": "/clipper-front-end/static/css/main.27a49266.chunk.css",
+    "main.js": "/clipper-front-end/static/js/main.2e185ac3.chunk.js",
+    "main.js.map": "/clipper-front-end/static/js/main.2e185ac3.chunk.js.map",
+    "runtime-main.js": "/clipper-front-end/static/js/runtime-main.9e54abfb.js",
+    "runtime-main.js.map": "/clipper-front-end/static/js/runtime-main.9e54abfb.js.map",
+    "static/js/2.19f3f4f4.chunk.js": "/clipper-front-end/static/js/2.19f3f4f4.chunk.js",
+    "static/js/2.19f3f4f4.chunk.js.map": "/clipper-front-end/static/js/2.19f3f4f4.chunk.js.map",
+    "static/js/3.b9eaaaed.chunk.js": "/clipper-front-end/static/js/3.b9eaaaed.chunk.js",
+    "static/js/3.b9eaaaed.chunk.js.map": "/clipper-front-end/static/js/3.b9eaaaed.chunk.js.map",
     "index.html": "/clipper-front-end/index.html",
-    "static/css/main.bb970e54.chunk.css.map": "/clipper-front-end/static/css/main.bb970e54.chunk.css.map",
-    "static/js/2.7d71d538.chunk.js.LICENSE.txt": "/clipper-front-end/static/js/2.7d71d538.chunk.js.LICENSE.txt",
+    "static/css/main.27a49266.chunk.css.map": "/clipper-front-end/static/css/main.27a49266.chunk.css.map",
+    "static/js/2.19f3f4f4.chunk.js.LICENSE.txt": "/clipper-front-end/static/js/2.19f3f4f4.chunk.js.LICENSE.txt",
     "static/media/logo.6ce24c58.svg": "/clipper-front-end/static/media/logo.6ce24c58.svg"
   },
   "entrypoints": [
-    "static/js/runtime-main.ee7f792e.js",
-    "static/js/2.7d71d538.chunk.js",
-    "static/css/main.bb970e54.chunk.css",
-    "static/js/main.a0170e02.chunk.js"
+    "static/js/runtime-main.9e54abfb.js",
+    "static/js/2.19f3f4f4.chunk.js",
+    "static/css/main.27a49266.chunk.css",
+    "static/js/main.2e185ac3.chunk.js"
   ]
 }
