@@ -1,15 +1,26 @@
 import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
+import { ThumbsUp } from 'react-feather'
+
+console.log(process.env.NODE_ENV)
+
+const url = process.env.NODE_ENV == 'development' ? 
+	"http://localhost:2002" : 
+	"https://discord-clips-api-5vhmvf6quq-uk.a.run.app"
+
+console.log(url)
 
 function App() {
 	
 	const [personTalking, setPersonTalking] = useState(null);
+	const [lastPlayed, setLastPlayed] = useState(null);
+	const [didLike, setDidLike] = useState(false)
 
 	const getSoundUrl = (id) => `https://storage.googleapis.com/amplify-discord-clips/${id}.ogg`
 	const getSound = async () => {
-		//const [response] = await fetch("http://localhost:2002/random", {
-		const [response] = await fetch("https://discord-clips-api-5vhmvf6quq-uk.a.run.app/random", {
+		
+		const [response] = await fetch(`${url}/random`, {
 			method: "GET",
 			headers: {
 				'Content-Type':'application/json'
@@ -18,8 +29,22 @@ function App() {
 		setPersonTalking(response.userName);
 		const audio = new Audio(getSoundUrl(response._id));
 		audio.play();
-		audio.onended = () => setPersonTalking(null);
+		setDidLike(false)
+		audio.onended = () => {
+			setPersonTalking(null)
+			setLastPlayed(response)
+		}
 		console.log(response);
+	}
+	const likeSound = async () => {
+		const response = await fetch(`${url}/like/${lastPlayed._id}`, {
+			method: "GET",
+			headers: {
+				'Content-Type':'application/json'
+			}
+		});
+		console.log(response)
+		setDidLike(true)
 	}
 
 	return (
@@ -39,6 +64,33 @@ function App() {
 			>
 				Play Sound
 			</span>
+			{lastPlayed && (
+				<div>
+					<div style={{
+						padding:10
+					}}>
+						{didLike ? (lastPlayed.likes || 0) + 1 : lastPlayed.likes || 0} likes
+					</div>
+					{!didLike && (
+						<div 
+							onClick={likeSound}
+							style={{
+								backgroundColor: 'white',
+								margin: 10,
+								padding: 5,
+								borderRadius: 8,
+								alignItems: "center",
+								justifyContent: "center"
+							}}
+						>
+							<ThumbsUp 
+								color={"black"}
+								size={50}
+							/>
+						</div>
+					)}
+				</div>
+			)}
 		</header>
 		</div>
 	);
