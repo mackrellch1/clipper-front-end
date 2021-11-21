@@ -92,7 +92,7 @@ function App() {
 					)}
 				</div>
 			)}
-			<TopLikes />
+			<TopLikes class="App-logo" />
 		</header>
 		
 		</div>
