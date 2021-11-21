@@ -40,7 +40,7 @@ function TopLikes() {
                 {data.map((item, index) => (
                     <tbody>
                     <tr class="rows" key={item._id}>
-                        <td style>{item.likes > 1 ? `${item.likes} likes` : `${item.likes} like`}</td>
+                        <td>{item.likes > 1 ? `${item.likes} likes` : `${item.likes} like`}</td>
                         <td>{moment(item.date).fromNow()}</td>
                         <td>{item.userName}</td>
                         <td class="App-link"
