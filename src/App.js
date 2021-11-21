@@ -2,6 +2,7 @@ import React, { useState } from 'react';
 import logo from './logo.svg';
 import './App.css';
 import { ThumbsUp } from 'react-feather'
+import TopLikes from './TopLikes';
 
 console.log(process.env.NODE_ENV)
 
@@ -50,7 +51,7 @@ function App() {
 	return (
 		<div className="App">
 		<header className="App-header">
-			<img src={logo} className="App-logo" alt="logo" />
+			
 			<p>
 				{personTalking && (
 					<span>
@@ -62,7 +63,7 @@ function App() {
 				className="App-link"
 				onClick={getSound}
 			>
-				Play Sound
+				Play Random Sound
 			</span>
 			{lastPlayed && (
 				<div>
@@ -91,7 +92,9 @@ function App() {
 					)}
 				</div>
 			)}
+			<TopLikes />
 		</header>
+		
 		</div>
 	);
 }
