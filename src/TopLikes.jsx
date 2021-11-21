@@ -37,6 +37,7 @@ function TopLikes() {
             </span>
             <table>
                 {data.map((item, index) => (
+                    <tbody>
                     <tr key={item._id}>
                         <td>{item.likes > 1 ? `${item.likes} likes` : `${item.likes} like`}</td>
                         <td>{moment(item.date).fromNow()}</td>
@@ -46,14 +47,25 @@ function TopLikes() {
                             audio.play();
                         }}>Play Sound</td>
                     </tr>
+                    </tbody>
                 ))}
             </table>
+            <div 
+                onClick={() => {
+                    setPage(page <= 0 ? page : (page - 1))
+                }}
+                style={{
+                        margin: 30
+                }}
+            >
+                Page Back
+            </div>
             <div 
                 onClick={() => {
                     setPage(page + 1)
                 }}
                 style={{
-                        margin: 30
+                        margin: 30,
                 }}
             >
                 Next Page
