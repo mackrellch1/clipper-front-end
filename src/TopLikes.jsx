@@ -1,6 +1,7 @@
 import React, { useState, useEffect } from 'react'
 import moment from 'moment'
 import './App.css';
+import { ChevronRight, ChevronLeft } from 'react-feather'
 
 
 const url = process.env.NODE_ENV == 'development' ? 
@@ -22,6 +23,9 @@ function TopLikes() {
 			},
 		}).then(r => r.json());
         console.log(response);
+        if (!response.length) {
+            setPage(page - 1)
+        }
 		setData(response)
 		
 	}
@@ -52,26 +56,33 @@ function TopLikes() {
                     </tbody>
                 ))}
             </table>
-            <div class="App-link"
-                onClick={() => {
-                    setPage(page <= 0 ? page : (page - 1))
-                }}
-                style={{
-                        opacity: page <= 0 ? 0.1 : 1,
-                        margin: 30
-                }}
-            >
-                Page Back
-            </div>
-            <div class="App-link"
-                onClick={() => {
-                    setPage(page + 1)
-                }}
-                style={{
-                        margin: 30,
-                }}
-            >
-                Next Page
+            <div style={{
+                justifyContent: 'center',
+                display: 'flex',
+                flexDirection: 'row'
+
+            }}>
+                <div class="Chevron Page-Button"
+                    onClick={() => {
+                        setPage(page <= 0 ? page : (page - 1))
+                    }}
+                    style={{
+                            opacity: page <= 0 ? 0.1 : 1,
+                            margin: 30
+                    }}
+                >
+                    <ChevronLeft />
+                </div>
+                <div class="Chevron Page-Button"
+                    onClick={() => {
+                        setPage(page + 1)
+                    }}
+                    style={{
+                            margin: 30,
+                    }}
+                >
+                    <ChevronRight />
+                </div>
             </div>
         </div>
     )

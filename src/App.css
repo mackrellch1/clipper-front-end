@@ -28,8 +28,22 @@ tr {
   color: #54ADEE;
 }
 
+.Page-Button {
+  background-color: blanchedalmond;
+  display: flex;
+  border-radius: 10px;
+  align-items: center;
+  justify-content: center;
+  padding: 100;
+}
+
 .App-link {
   color: #F25C7A;
+}
+
+.Chevron {
+  margin: horizontal;
+  color: black;
 }
 
 @keyframes App-logo-spin {
