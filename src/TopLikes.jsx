@@ -1,7 +1,8 @@
 import React, { useState, useEffect } from 'react'
 import moment from 'moment'
 import './App.css';
-import { ChevronRight, ChevronLeft } from 'react-feather'
+import { ChevronRight, ChevronLeft, Download } from 'react-feather'
+
 
 
 const url = process.env.NODE_ENV == 'development' ? 
@@ -52,6 +53,11 @@ function TopLikes() {
                                 const audio = new Audio(getSoundUrl(item._id));
                                 audio.play();
                             }}>Play Sound</td>
+                        <td>
+                            <Download onClick={() => {
+                                window.open(`https://storage.googleapis.com/amplify-discord-clips/${item._id}.ogg`)
+                            }}/>
+                        </td>
                     </tr>
                     </tbody>
                 ))}
